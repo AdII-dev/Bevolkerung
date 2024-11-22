@@ -1,0 +1,41 @@
+﻿<Window x:Class="Bevolkerung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bevolkerung"
+        mc:Ignorable="d"
+        Title="Németország anonimizált lakorssági adatai" Height="750" Width="1300">
+    <Grid Margin="0,0,0,-6">
+        <ComboBox Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="42" SelectionChanged="ComboBox_SelectionChanged">
+
+        </ComboBox>
+        <Label Name="TesztKiiras" Content="Label" HorizontalAlignment="Left" Height="29" Margin="346,21,0,0" VerticalAlignment="Top" Width="238"/>
+        <DataGrid x:Name="MegoldasTeljes" Margin="29,84,29,346" Height="310" Width="auto" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" />
+                <DataGridTextColumn Header="Nem" Binding="{Binding Nem}" Width="*"/>
+                <DataGridTextColumn Header="Születési év" Binding="{Binding SzuletesiEv}" Width="*"/>
+                <DataGridTextColumn Header="Súly" Binding="{Binding Suly}" Width="*"/>
+                <DataGridTextColumn Header="Magasság" Binding="{Binding Magassag}" Width="*"/>
+                <DataGridTextColumn Header="Dohányzik" Binding="{Binding Dohanyzik}" Width="*"/>
+                <DataGridTextColumn Header="Nemzetiség" Binding="{Binding Nemzetiseg}" Width="*"/>
+                <DataGridTextColumn Header="Népcsoport" Binding="{Binding Nepcsoport}" Width="*"/>
+                <DataGridTextColumn Header="Tartomány" Binding="{Binding Tartomany}" Width="*"/>
+                <DataGridTextColumn Header="Netto éves kövedelm" Binding="{Binding NettoJovedelem}" Width="*"/>
+                <DataGridTextColumn Header="Iskolai végzettség" Binding="{Binding IskolaiVegzettseg}" Width="*"/>
+                <DataGridTextColumn Header="Politikai nézet" Binding="{Binding PolitikaiNezet}" Width="*"/>
+                <DataGridTextColumn Header="Aktív szavazó" Binding="{Binding AktivSzavazo}" Width="*"/>
+                <DataGridTextColumn Header="Évi sörfogyasztás" Binding="{Binding SorFogyasztasEvente}" Width="*"/>
+                <DataGridTextColumn Header="Évi krumplifogyasztás" Binding="{Binding KrumpliFogyasztasEvente}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Megoldásként leszűrt sorok" HorizontalAlignment="Left" Height="26" Margin="10,53,0,0" VerticalAlignment="Top" Width="226" FontWeight="Bold"/>
+        <Label Content="feladat egy mondatos megoldása:" HorizontalAlignment="Left" Height="30" Margin="57,6,0,0" VerticalAlignment="Top" Width="201" FontWeight="Bold"/>
+        <Label Content="Listás megoldás:" HorizontalAlignment="Left" Height="28" Margin="526,662,0,0" VerticalAlignment="Top" Width="113" FontWeight="Bold"/>
+        <ListBox HorizontalAlignment="Left" Height="51" Margin="392,606,0,0" VerticalAlignment="Top" Width="380" d:ItemsSource="{d:SampleData ItemCount=5}" IsSynchronizedWithCurrentItem="True"/>
+
+
+
+    </Grid>
+</Window>

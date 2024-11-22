@@ -1,0 +1,3 @@
+var methodName = $"Feladat{selectedTask}";
+var method = GetType().GetMethod(methodName, BindingFlags.NonPublic | BindingFlags.Instance); //Ez a sor megkeresi a metódust az osztályban a megadott methodName névvel. A BindingFlags.NonPublic azt jelzi, hogy a nem publikus metódusokat is keresi, és a BindingFlags.Instance azt jelzi, hogy az aktuális példány metódusait keresi.
+method?.Invoke(this, null); // Feltételezzük, hogy a metódus mindig elérhető Ha a metódus megtalálható, akkor meghívja azt az aktuális példányra (this) null paraméterrel. A ?. operátor biztosítja, hogy csak akkor próbálja meg meghívni a metódust, ha az valóban létezik.
